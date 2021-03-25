@@ -1,0 +1,47 @@
+[
+  {
+    "key": "01",
+    "title": "FÓRMULA DE LANÇAMENTO ",
+    "rate": "3.4",
+    "name": "Érico Rocha",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, w",
+    "price": "2500",
+    "categorie": "Érico Rocha"
+  },
+  {
+    "key": "02",
+    "title": "FÓRMULA DE LANÇAMENTO A",
+    "rate": "4.8",
+    "name": "Érico Rocha",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "price": "3500",
+    "categorie": "Desafio 6 em 7"
+  },
+  {
+    "key": "03",
+    "title": "FÓRMULA DE LANÇAMENTO B",
+    "rate": "5.0",
+    "name": "Érico Rocha",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. .",
+    "price": "1500",
+    "categorie": "Fórmula de lançamento"
+  },
+  {
+    "key": "04",
+    "title": "FÓRMULA DE LANÇAMENTO C",
+    "rate": "2.1",
+    "name": "Érico Rocha",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "price": "3000",
+    "categorie": "KlickPages"
+  },
+  {
+    "key": "05",
+    "title": "FÓRMULA DE LANÇAMENTO D",
+    "rate": "2.7",
+    "name": "Érico Rocha",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "price": "5000",
+    "categorie": "Audios"
+  }
+]

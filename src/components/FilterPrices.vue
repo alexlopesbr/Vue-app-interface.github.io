@@ -3,19 +3,24 @@
     <div class="prices">
       <h3>Preços</h3>
       <div class="radios">
-        <input type="radio" id="ten" value="10" v-model="picked" />
+        <input type="radio" id="ten" value="0 10" v-model="picked" />
         <label for="ten">R$10</label>
 
-        <input type="radio" id="hundred" value="10-100" v-model="picked" />
+        <input type="radio" id="hundred" value="10 100" v-model="picked" />
         <label for="hundred">R$10-R$100</label>
 
-        <input type="radio" id="five-hun" value="100-500" v-model="picked" />
-        <label for="five-hun">R$100-R$500</label>
+        <input type="radio" id="five-hun" value="100 250" v-model="picked" />
+        <label for="five-hun">R$100-R$250</label>
 
-        <input type="radio" id="five-hun-above" value="500" v-model="picked" />
-        <label for="five-hun-above">R$500</label>
+        <input
+          type="radio"
+          id="five-hun-above"
+          value="250 500"
+          v-model="picked"
+        />
+        <label for="five-hun-above">R$250-R$500</label>
 
-        <input type="radio" id="all" value="all" v-model="picked" />
+        <input type="radio" id="all" value="0 500" v-model="picked" />
         <label for="all">Todos</label>
       </div>
     </div>
@@ -24,12 +29,20 @@
 </template>
 
 <script>
-
+import { mapState } from 'vuex'
 export default {
   name: 'FilterPrices',
   data() {
     return {
       picked: 'all'
+    }
+  },
+  computed: {
+    ...mapState(['price']),
+  },
+  watch: {
+    picked() {
+      this.$store.commit("changePrice", this.picked);
     }
   }
 }

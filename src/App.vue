@@ -85,7 +85,7 @@ aside {
 
 main {
   padding: 30px 37px;
-  height: 100vh;
+  min-height: 100vh;
 
   background: #e5e5e5;
 }

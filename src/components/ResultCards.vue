@@ -1,42 +1,56 @@
 <template>
-  <section class="card">
+  <section v-for="(api, index) in apis" :key="index" class="card">
     <figure>
-      <img src="../assets/card-picture.svg" alt="" />
+      <img src="../assets/card-picture.svg" alt="Imagem do produto" />
     </figure>
 
     <article>
-      <h1>FÓRMULA DE LANÇAMENTO</h1>
-      <cite>Por <strong>Érico Rocha</strong></cite>
+      <h1>{{ api.title }}</h1>
+      <cite
+        >Por <strong>{{ api.name }}</strong></cite
+      >
       <blockquote>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
+        {{ api.content }}
       </blockquote>
     </article>
 
     <div class="buy">
       <div class="rating">
-        <span>3.4</span>
-        <img src="../assets/card-star.svg" alt="" />
+        <span>{{ api.rate }}</span>
+        <img
+          src="../assets/card-star.svg"
+          alt="Imagem de estrela da avaliação"
+        />
       </div>
 
-      <span>R$2500</span>
+      <span>R${{ api.price }}</span>
 
       <button class="btn-heart">
-        <img src="../assets/card-heart.svg" alt="" />AMEI
+        <img
+          src="../assets/card-heart.svg"
+          alt="Imagem de coração do botão amei"
+        />AMEI
       </button>
 
       <button class="btn-buy">
-        <img src="../assets/card-bag.svg" alt="" />COMPRAR
+        <img
+          src="../assets/card-bag.svg"
+          alt="Imagem de bolsa de compras do botão comprar"
+        />COMPRAR
       </button>
     </div>
   </section>
 </template>
 
 <script>
-export default {
+import fakeApi from '@/fakeApi.json'
 
+export default {
+  data() {
+    return {
+      apis: fakeApi,
+    }
+  }
 }
 </script>
 
