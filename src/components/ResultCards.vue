@@ -43,13 +43,26 @@
 </template>
 
 <script>
-import fakeApi from '@/fakeApi.json'
+import axios from 'axios'
 
 export default {
   data() {
     return {
-      apis: fakeApi,
+      apis: null,
     }
+  },
+
+  methods: {
+    getProducts() {
+      axios.get('http://localhost:3000/products')
+        .then(r => {
+          this.apis = r.data
+        })
+    }
+  },
+
+  created() {
+    this.getProducts()
   }
 }
 </script>
