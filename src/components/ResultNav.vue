@@ -8,16 +8,16 @@
         <div v-show="open" class="options">
           <ul @click="open = !open">
             <li>
-              <button @click="sortOf = 'price'">preço</button>
+              <button @click="sort = 'price'">preço</button>
             </li>
             <li>
-              <button @click="sortOf = 'rate'">avaliação</button>
+              <button @click="sort = 'rate'">avaliação</button>
             </li>
             <li>
-              <button @click="sortOf = 'name'">nome</button>
+              <button @click="sort = 'name'">nome</button>
             </li>
             <li>
-              <button class="clear" @click="sortOf = ''">limpar</button>
+              <button class="clear" @click="sort = ''">limpar</button>
             </li>
           </ul>
         </div>
@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       open: false,
-      sortOf: ''
+      sort: ''
     }
   },
 
@@ -50,8 +50,8 @@ export default {
   },
 
   watch: {
-    sortOf() {
-      this.$store.commit("changeSort", this.sortOf);
+    sort() {
+      this.$store.commit("changeSort", this.sort);
       this.open = !this.open
     }
 
