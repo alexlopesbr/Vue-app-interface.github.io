@@ -1,5 +1,5 @@
 <template>
-  <section v-for="(api, index) in apis" :key="index" class="card">
+  <section v-for="(api, index) in sort" :key="index" class="card">
     <figure>
       <img src="../assets/card-picture.svg" alt="Imagem do produto" />
     </figure>
@@ -44,25 +44,35 @@
 
 <script>
 import axios from 'axios'
+import _ from 'lodash'
+import { mapState } from 'vuex'
 
 export default {
   data() {
     return {
       apis: null,
+      typeSort: ''
     }
   },
 
-  methods: {
-    getProducts() {
-      axios.get('http://localhost:3000/products')
-        .then(r => {
-          this.apis = r.data
-        })
+  mounted() {
+    axios.get('http://localhost:3000/products')
+      .then(r => {
+        this.apis = r.data
+      })
+  },
+
+  computed: {
+    ...mapState(['sortOf']),
+    sort() {
+      return _.orderBy(this.apis, this.typeSort)
     }
   },
 
-  created() {
-    this.getProducts()
+  watch: {
+    sortOf() {
+      this.typeSort = this.sortOf
+    }
   }
 }
 </script>

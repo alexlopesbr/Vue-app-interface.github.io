@@ -8,10 +8,16 @@
         <div v-show="open" class="options">
           <ul @click="open = !open">
             <li>
-              <p>item1</p>
+              <button @click="sortOf = 'price'">preço</button>
             </li>
             <li>
-              <p>item2</p>
+              <button @click="sortOf = 'rate'">avaliação</button>
+            </li>
+            <li>
+              <button @click="sortOf = 'name'">nome</button>
+            </li>
+            <li>
+              <button class="clear" @click="sortOf = ''">limpar</button>
             </li>
           </ul>
         </div>
@@ -29,12 +35,26 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   nome: 'ResultNav',
   data() {
     return {
-      open: false
+      open: false,
+      sortOf: ''
     }
+  },
+
+  computed: {
+    ...mapState(['sortOf'])
+  },
+
+  watch: {
+    sortOf() {
+      this.$store.commit("changeSort", this.sortOf);
+      this.open = !this.open
+    }
+
   }
 }
 </script>
@@ -57,6 +77,7 @@ nav {
 }
 .dropdown {
   position: relative;
+  width: 150px;
 
   display: grid;
   grid-template-columns: 1fr 16px;
@@ -67,7 +88,6 @@ nav {
   padding: 0 13px;
 
   cursor: pointer;
-
   border-radius: 4px;
 
   background: #fff;
@@ -98,6 +118,20 @@ button {
 
   border-radius: 5px;
   background-color: #fff;
+}
+
+.options button {
+  width: 100%;
+  padding: 20px;
+  transition: 0.2s;
+}
+
+.clear {
+  background-color: #686868;
+}
+
+.options button:hover {
+  background-color: #efefef;
 }
 
 .dropdown,
