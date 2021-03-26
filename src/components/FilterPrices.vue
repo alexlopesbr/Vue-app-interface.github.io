@@ -30,19 +30,23 @@
 
 <script>
 import { mapState } from 'vuex'
+
 export default {
   name: 'FilterPrices',
+
   data() {
     return {
       picked: 'all'
     }
   },
+
   computed: {
     ...mapState(['price']),
   },
+
   watch: {
     picked() {
-      this.$store.commit("changePrice", this.picked);
+      this.$store.commit('changePrice', this.picked);
     }
   }
 }
@@ -66,9 +70,11 @@ input[type="radio"] {
 
 input[type="radio"] + label {
   display: inline-block;
+
   height: 20px;
   padding: 0 0 0 25px;
   margin: 0 10px 0 0;
+
   background-image: url(../assets/radios.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -77,6 +83,7 @@ input[type="radio"] + label {
 input[type="radio"]:checked + label {
   background-position: 0 -30px;
 }
+
 hr {
   margin: 20px 0;
 }

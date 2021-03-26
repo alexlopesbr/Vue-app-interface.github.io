@@ -2,41 +2,45 @@
   <nav>
     <ul class="icons">
       <li>
-        <figure>
-          <img src="../assets/menu-check-square.svg" alt="" />
-        </figure>
+        <img
+          src="../assets/menu-check-square.svg"
+          alt="imagem do botão de check"
+        />
       </li>
       <li>
-        <figure>
-          <img src="../assets/menu-message-square.svg" alt="" />
-        </figure>
+        <img
+          src="../assets/menu-message-square.svg"
+          alt="imagem do botão de mensagem"
+        />
       </li>
       <li>
-        <figure>
-          <img src="../assets/menu-mail.svg" alt="" />
-        </figure>
+        <img src="../assets/menu-mail.svg" alt="imagem do botão de e-mail" />
       </li>
       <li>
-        <figure>
-          <img src="../assets/menu-calendar.svg" alt="" />
-        </figure>
+        <img
+          src="../assets/menu-calendar.svg"
+          alt="imagem do botão de calendário"
+        />
       </li>
       <li>
-        <figure>
-          <img src="../assets/navbar-star.svg" alt="" />
-        </figure>
+        <img
+          src="../assets/navbar-star.svg"
+          alt="imagem do botão de favoritos"
+        />
       </li>
     </ul>
     <ul class="info">
       <li>
-        <figure>
-          <img src="../assets/navbar-bell.svg" alt="" />
-        </figure>
+        <img
+          src="../assets/navbar-bell.svg"
+          alt="imagem do botão de notificações"
+        />
       </li>
       <li>
-        <figure>
-          <img src="../assets/navbar-search.svg" alt="" />
-        </figure>
+        <img
+          src="../assets/navbar-search.svg"
+          alt="imagem do botão de pesquisa"
+        />
       </li>
       <li>
         <div class="name">
@@ -45,9 +49,7 @@
         </div>
       </li>
       <li>
-        <figure>
-          <img src="../assets/navbar-oval.svg" alt="" />
-        </figure>
+        <img src="../assets/navbar-oval.svg" alt="imagem da foto do usuário" />
       </li>
     </ul>
   </nav>
@@ -56,11 +58,6 @@
 <script>
 export default {
   name: 'NavBar',
-  data() {
-    return {
-
-    }
-  }
 }
 </script>
 
@@ -72,7 +69,7 @@ nav {
   display: flex;
   justify-content: space-between;
 
-  background: #ffffff;
+  background: var(--white);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
   border-radius: 8px;
 }
@@ -86,7 +83,7 @@ li {
 }
 
 li:hover {
-  background-color: #cecece;
+  background-color: var(--light-grey);
 }
 
 .icons,
@@ -94,15 +91,13 @@ li:hover {
   display: flex;
   align-items: center;
 }
-
 .name p {
   text-align: right;
 }
-
 .name p:first-child {
-  font-size: 14px;
+  font-size: 0.875;
 }
 .name p:last-child {
-  font-size: 11px;
+  font-size: 0.688rem;
 }
 </style>

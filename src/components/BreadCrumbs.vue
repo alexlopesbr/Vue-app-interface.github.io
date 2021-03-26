@@ -3,23 +3,22 @@
     <div class="path">
       <h2>Resultados</h2>
 
-      <figure>
-        <img src="../assets/bread-home.svg" alt="" />
-      </figure>
+      <img
+        class="pathSeparator"
+        src="../assets/bread-home.svg"
+        alt="Imagem da home"
+      />
 
       <p>>> Cursos</p>
     </div>
-    <figure class="settings">
-      <img src="../assets/navbar-settings.svg" alt="" />
-    </figure>
+
+    <img
+      class="settings"
+      src="../assets/navbar-settings.svg"
+      alt="imagem do botão configurações"
+    />
   </section>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style scoped>
 .path,
@@ -37,10 +36,11 @@ h2 {
   margin-right: 43px;
 }
 
-.path figure {
+.pathSeparator {
   padding: 0 13px;
-  border-left: solid 1px #979797;
+  border-left: solid 1px var(--mediun-grey);
 }
+
 .settings {
   padding: 10px;
 
@@ -49,7 +49,7 @@ h2 {
 
   border-radius: 50%;
 
-  background: #717171;
   cursor: pointer;
+  background: var(--mediun-grey);
 }
 </style>

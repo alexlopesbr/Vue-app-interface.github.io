@@ -1,5 +1,6 @@
 <template>
   <h3>Categorias</h3>
+
   <div class="inputs">
     <input
       type="checkbox"
@@ -59,6 +60,7 @@ export default {
 h3 {
   margin-bottom: 20px;
 }
+
 .inputs {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -67,6 +69,7 @@ h3 {
 span {
   text-align: right;
 }
+
 hr {
   margin: 20px 0;
 }

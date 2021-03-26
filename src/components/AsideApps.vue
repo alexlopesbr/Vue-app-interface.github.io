@@ -1,19 +1,23 @@
 <template>
   <section class="apps">
     <h2>APPS</h2>
+
     <ul>
       <li @click="openmodal">
         <img src="../assets/menu-mail.svg" alt="Email link" />
         <p>Email</p>
       </li>
+
       <li>
         <img src="../assets/menu-message-square.svg" alt="Menssagem link" />
         <p>Conversar</p>
       </li>
+
       <li>
         <img src="../assets/menu-check-square.svg" alt="Todo link" />
         <p>Todo</p>
       </li>
+
       <li>
         <img src="../assets/menu-calendar.svg" alt="Calendario link" />
         <p>Calendário</p>
@@ -24,8 +28,7 @@
 
 <script>
 export default {
-  name: "MyApps",
-
+  name: 'MyApps',
 }
 </script>
 
@@ -42,12 +45,11 @@ export default {
   border-bottom: solid 2px transparent;
 
   cursor: pointer;
-
   transition: all 0.3s;
 }
 
 .apps li:hover {
-  border-bottom: solid 2px #cecece;
+  border-bottom: solid 2px var(--mediun-grey);
 }
 
 .apps li img {

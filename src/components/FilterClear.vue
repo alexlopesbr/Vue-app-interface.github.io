@@ -18,14 +18,14 @@ button {
   border: none;
   border-radius: 8px;
 
-  background: #696969;
-  color: #fff;
+  background-color: var(--mediun-grey);
+  color: var(--white);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
 
   transition: all 0.2s;
 }
 
 button:hover {
-  background: #555;
+  background: var(--dark-grey);
 }
 </style>

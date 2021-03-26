@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import AsideNav from "@/components/AsideNav.vue"
-import AsideApps from "@/components/AsideApps.vue"
+import AsideNav from '@/components/AsideNav.vue'
+import AsideApps from '@/components/AsideApps.vue'
 
 export default {
   components: {
@@ -43,18 +43,18 @@ blockquote {
 }
 
 h1 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 h2 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
   text-align: left;
 }
 
 p {
-  font-size: 15px;
+  font-size: 0.938;
 }
 
 ul {
@@ -63,13 +63,21 @@ ul {
 
 /* GENERAL */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+:root {
+  --white: #fff;
+  --light-grey: #ececec;
+  --mediun-grey: #717171;
+  --dark-grey: #2c2c2c;
+
+  --bg-main: #e5e5e5;
+}
 
 #app {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  color: #2c2c2c;
+  color: var(--dark-grey);
 }
 
 .container {
@@ -87,6 +95,6 @@ main {
   padding: 30px 37px;
   min-height: 100vh;
 
-  background: #e5e5e5;
+  background: var(--bg-main);
 }
 </style>

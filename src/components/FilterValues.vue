@@ -15,7 +15,9 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'FilterValues',
+
   components: { Slider },
+
   data: () => ({
     value: [0, 500],
 
@@ -23,9 +25,11 @@ export default {
     min: 0,
     max: 500
   }),
+
   computed: {
     ...mapState(['price']),
   },
+
   watch: {
     price() {
       this.value = [parseInt(this.price[0], 10), parseInt(this.price[1], 10)]
@@ -51,4 +55,5 @@ hr {
   margin: 20px 0;
 }
 </style>
+
 <style src="@vueform/slider/themes/default.css"></style>

@@ -10,12 +10,15 @@
             <li>
               <button @click="sort = 'price'">preço</button>
             </li>
+
             <li>
               <button @click="sort = 'rate'">avaliação</button>
             </li>
+
             <li>
               <button @click="sort = 'name'">nome</button>
             </li>
+
             <li>
               <button class="clear" @click="sort = ''">limpar</button>
             </li>
@@ -54,7 +57,6 @@ export default {
       this.$store.commit("changeSort", this.sort);
       this.open = !this.open
     }
-
   }
 }
 </script>
@@ -62,8 +64,8 @@ export default {
 <style scoped>
 h2 {
   font-weight: 400;
-  font-size: 18px;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -75,6 +77,7 @@ nav {
   display: flex;
   grid-gap: 13px;
 }
+
 .dropdown {
   position: relative;
   width: 150px;
@@ -90,13 +93,13 @@ nav {
   cursor: pointer;
   border-radius: 4px;
 
-  background: #fff;
+  background: var(--white);
 }
 
 button {
   height: 36px;
   width: 36px;
-  background: #fff;
+  background: var(--white);
 
   border: none;
   border-radius: 4px;
@@ -117,7 +120,7 @@ button {
   padding: 5px;
 
   border-radius: 5px;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .options button {
@@ -127,11 +130,11 @@ button {
 }
 
 .clear {
-  background-color: #686868;
+  background-color: var(--mediun-grey);
 }
 
 .options button:hover {
-  background-color: #efefef;
+  background-color: var(--white-grey);
 }
 
 .dropdown,

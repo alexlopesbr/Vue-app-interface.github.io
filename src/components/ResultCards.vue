@@ -1,8 +1,6 @@
 <template>
   <section v-for="(api, index) in sort" :key="index" class="card">
-    <figure>
-      <img src="../assets/card-picture.svg" alt="Imagem do produto" />
-    </figure>
+    <img src="../assets/card-picture.svg" alt="Imagem do produto" />
 
     <article>
       <h1>{{ api.title }}</h1>
@@ -88,7 +86,7 @@ export default {
   border-radius: 8px;
 
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 article h1 {
@@ -96,23 +94,25 @@ article h1 {
 }
 
 cite {
-  font-size: 12px;
-  color: #7e7e7e;
+  font-size: 0.75rem;
+  color: var(--mediun-grey);
 }
 
 blockquote {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 23px;
 }
+
 .buy {
   display: grid;
   grid-template-columns: 1fr;
 
   padding-left: 20px;
 
-  border-left: solid 2px #dadada;
+  border-left: solid 2px var(--light-grey);
 }
+
 .rating {
   display: grid;
   grid-auto-flow: column;
@@ -128,7 +128,7 @@ blockquote {
   text-align: center;
 
   color: #fff;
-  background-color: #787878;
+  background-color: var(--mediun-grey);
   border-radius: 3px;
 }
 
@@ -142,7 +142,7 @@ button {
   align-items: center;
   grid-gap: 8px;
 
-  font-size: 14px;
+  font-size: 0.875rem;
 
   border: none;
   border-radius: 8px;
@@ -155,18 +155,17 @@ button {
 }
 
 .btn-heart:hover {
-  background-color: #7e7e7e;
+  background-color: var(--mediun-grey);
 }
 
 .btn-buy {
   margin-top: 11px;
   color: #fff;
-  background-color: #787878;
+  background-color: var(--mediun-grey);
 }
 
 .btn-buy:hover {
-  background-color: #ededed;
+  background-color: var(--light-grey);
   color: initial;
-  fill: black;
 }
 </style>
