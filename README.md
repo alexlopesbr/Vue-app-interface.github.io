@@ -29,6 +29,12 @@
 $ npm install -g json-server
 ```
 
+<h3>Project setup</h3>
+
+```
+$ npm install
+```
+
 <h3>Starting the fake API -> Set the folder API and start it</h3>
 
 ```
