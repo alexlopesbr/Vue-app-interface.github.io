@@ -1,9 +1,13 @@
-<h1 align="center">Teste Ignição Digital</h1>
+<h1 align="center">Vue app interface</h1>
+
+<img src="./src/assets/vueApp.gif">
+
+---
 
 <h2 align="center">About</h2>
    
    <p align="center">
-      An interface builded in Vue.js 
+      An interface builded in Vue.js to a challenge
    </p>
 
 ---

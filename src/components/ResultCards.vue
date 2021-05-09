@@ -41,38 +41,37 @@
 </template>
 
 <script>
-import axios from 'axios'
-import _ from 'lodash'
-import { mapState } from 'vuex'
+import axios from 'axios';
+import _ from 'lodash';
+import { mapState } from 'vuex';
 
 export default {
   data() {
     return {
       apis: null,
-      typeSort: ''
-    }
+      typeSort: '',
+    };
   },
 
   mounted() {
-    axios.get('http://localhost:3000/products')
-      .then(r => {
-        this.apis = r.data
-      })
+    axios.get('http://localhost:3000/products').then((r) => {
+      this.apis = r.data;
+    });
   },
 
   computed: {
     ...mapState(['sortOf']),
     sort() {
-      return _.orderBy(this.apis, this.typeSort)
-    }
+      return _.orderBy(this.apis, this.typeSort);
+    },
   },
 
   watch: {
     sortOf() {
-      this.typeSort = this.sortOf
-    }
-  }
-}
+      this.typeSort = this.sortOf;
+    },
+  },
+};
 </script>
 
 <style>

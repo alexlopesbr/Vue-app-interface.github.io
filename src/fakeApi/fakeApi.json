@@ -2,48 +2,48 @@
   "products": [
     {
       "key": "01",
-      "title": "a FÓRMULA DE LANÇAMENTO ",
+      "title": "a LOREM IPSUM ",
       "rate": "3.4",
-      "name": "Érico Rocha",
+      "name": "Jane Doe",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, w",
       "price": "2500",
-      "categorie": "Érico Rocha"
+      "categorie": "Catedoria 1"
     },
     {
       "key": "02",
-      "title": "b FÓRMULA DE LANÇAMENTO A",
+      "title": "b LOREM IPSUM A",
       "rate": "4.8",
-      "name": "Érico Rocha",
+      "name": "Jane Doe",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "price": "3500",
-      "categorie": "Desafio 6 em 7"
+      "categorie": "Catedoria 2"
     },
     {
       "key": "03",
-      "title": "c FÓRMULA DE LANÇAMENTO B",
+      "title": "c LOREM IPSUM B",
       "rate": "5.0",
-      "name": "Érico Rocha",
+      "name": "Jane Doe",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. .",
       "price": "1500",
-      "categorie": "Fórmula de lançamento"
+      "categorie": "Catedoria 3"
     },
     {
       "key": "04",
-      "title": "d FÓRMULA DE LANÇAMENTO C",
+      "title": "d LOREM IPSUM C",
       "rate": "2.1",
-      "name": "Érico Rocha",
+      "name": "Jane Doe",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "price": "3000",
-      "categorie": "KlickPages"
+      "categorie": "Catedoria 4"
     },
     {
       "key": "05",
-      "title": "e FÓRMULA DE LANÇAMENTO D",
+      "title": "e LOREM IPSUM D",
       "rate": "2.7",
-      "name": "Érico Rocha",
+      "name": "Jane Doe",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "price": "5000",
-      "categorie": "Audios"
+      "categorie": "Catedoria 5"
     }
   ]
 }

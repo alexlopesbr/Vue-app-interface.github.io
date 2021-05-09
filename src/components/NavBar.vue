@@ -44,7 +44,7 @@
       </li>
       <li>
         <div class="name">
-          <p>Maria Elza</p>
+          <p>Jane Doe</p>
           <p>Cliente VIP</p>
         </div>
       </li>
@@ -58,7 +58,7 @@
 <script>
 export default {
   name: 'NavBar',
-}
+};
 </script>
 
 <style scoped>

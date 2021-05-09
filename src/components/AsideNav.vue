@@ -1,10 +1,6 @@
 <template>
   <nav id="nav">
-    <img
-      src="../assets/menu-brand.svg"
-      alt="Logo Ignição Digital"
-      class="logo"
-    />
+    <img src="../assets/logo.png" alt="Logo" class="logo" />
 
     <div @click="open = !open" class="dropdown">
       {{ currentPage }}
@@ -32,10 +28,10 @@ export default {
   data() {
     return {
       currentPage: 'Área do cliente',
-      open: false
-    }
+      open: false,
+    };
   },
-}
+};
 </script>
 
 <style scoped>
@@ -45,7 +41,7 @@ export default {
 }
 
 #nav a {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--dark-grey);
   text-decoration: none;
 }
@@ -74,11 +70,11 @@ export default {
 }
 
 .dropdown::before {
-  content: url("../assets/menu-home.svg");
+  content: url('../assets/menu-home.svg');
 }
 
 .dropdown::after {
-  content: url("../assets/menu-chevron.svg");
+  content: url('../assets/menu-chevron.svg');
   cursor: pointer;
 }
 
