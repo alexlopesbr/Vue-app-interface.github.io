@@ -1,11 +1,11 @@
 <template>
-  <section v-for="(api, index) in sort" :key="index" class="card">
-    <img src="../assets/card-picture.svg" alt="Imagem do produto" />
+  <section v-for="(api, index) in apis" :key="index" class="card">
+    <img :src=this.picLink+api.image :alt=api.alt_image />   
 
     <article>
       <h1>{{ api.title }}</h1>
       <cite
-        >Por <strong>{{ api.name }}</strong></cite
+        >Por <strong>{{ api.author }}</strong></cite
       >
       <blockquote>
         {{ api.content }}
@@ -35,42 +35,44 @@
           src="../assets/card-bag.svg"
           alt="Imagem de bolsa de compras do botão comprar"
         />COMPRAR
-      </button>
+      </button>     
     </div>
   </section>
 </template>
 
 <script>
-import axios from 'axios';
-import _ from 'lodash';
-import { mapState } from 'vuex';
 
 export default {
   data() {
     return {
       apis: null,
-      typeSort: '',
-    };
-  },
+      image: ['http://127.0.0.1:8000/images/vue-django_MgdBJBt.png'],
+      picTest: 'vue-django_MgdBJBt' ,
+      imageTest: [`http://127.0.0.1:8000/images/${this.picTest}.png`],
+      namePic: 'vue-django-2',   
+      pic: '/images/vue-django.png',
+      picLink: 'http://127.0.0.1:8000'
+    }
+  }, 
 
-  mounted() {
-    axios.get('http://localhost:3000/products').then((r) => {
-      this.apis = r.data;
-    });
-  },
+  methods: {   
+    async getData() {
+      try{
+        const dataResponse = await fetch('http://127.0.0.1:8000/core/course/')
+        const dataJSON = await dataResponse.json()
+        this.apis = dataJSON.results           
+      }
+      catch(err) {
+        console.log(err)
+      }
+    }     
+  }, 
 
-  computed: {
-    ...mapState(['sortOf']),
-    sort() {
-      return _.orderBy(this.apis, this.typeSort);
-    },
-  },
+  mounted() {     
+    this.getData()    
+  }, 
 
-  watch: {
-    sortOf() {
-      this.typeSort = this.sortOf;
-    },
-  },
+  
 };
 </script>
 
@@ -82,10 +84,15 @@ export default {
 
   padding: 20px 20px 20px 10px;
   margin: 10px 0;
+  min-height: 250px;
   border-radius: 8px;
 
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
   background-color: var(--white);
+}
+
+.card img{
+  max-width: 200px;
 }
 
 article h1 {
